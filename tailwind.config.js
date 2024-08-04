@@ -25,6 +25,9 @@ export default {
         sm: "4px",
         md: "8px",
       },
+      boxShadow: {
+        nav: "12px 12px 12px 12px rgba(0, 0, 0, 0.04)",
+      },
     },
   },
   plugins: [],
