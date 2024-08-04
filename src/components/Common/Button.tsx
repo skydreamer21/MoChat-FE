@@ -10,7 +10,7 @@ const Button = ({ text, variant = "primary", onClick }: ButtonProps) => {
     <button
       disabled={isDisabled}
       onClick={isDisabled ? undefined : onClick}
-      className={`flex-1 h-12 rounded-lg focus:outline-none ${
+      className={`flex-1 h-10 rounded-lg focus:outline-none ${
         variant === "primary"
           ? "bg-primary text-white"
           : variant === "disabled"
