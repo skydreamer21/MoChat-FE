@@ -46,20 +46,3 @@
     url("./assets/fonts/Pretendard-ExtraBold.woff") format("woff"),
     url("./assets/fonts/Pretendard-ExtraBold.woff2") format("woff2");
 }
-
-.safe-area-padding {
-  padding-top: env(
-    safe-area-inset-top,
-    0px
-  ); /* iOS 환경에서 안전 영역의 위쪽 inset 가져오기 */
-}
-
-/* Fallback 지원 (구형 iOS 기기 및 비 iOS 기기에서는 기본적으로 0px) */
-@supports (padding: max(0px)) {
-  .safe-area-padding {
-    padding-top: max(
-      env(safe-area-inset-top, 0px),
-      constant(safe-area-inset-top, 0px)
-    );
-  }
-}

@@ -1,5 +1,5 @@
-import HeadBar from "../../components/HeadBar/HeadBar";
-import NavBar from "../../components/NavBar/NavBar";
+import HeadBar from "../../components/Bar/HeadBar";
+import NavBar from "../../components/Bar/NavBar";
 
 export default function MainPage() {
   return (

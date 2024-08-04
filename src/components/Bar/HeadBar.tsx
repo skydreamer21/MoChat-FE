@@ -23,7 +23,7 @@ export default function HeadBar({
   };
 
   return (
-    <div style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+    <div>
       <div className="bg-white relative flex items-center px-5 py-3">
         <div className="absolute left-4">
           {backbtn ? (
