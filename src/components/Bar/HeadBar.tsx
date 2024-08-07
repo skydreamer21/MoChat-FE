@@ -36,7 +36,7 @@ export default function HeadBar({
         </div>
 
         <div className={`flex-1 ${center ? "text-center" : "text-left"}`}>
-          <span className="text-lg font-semibold">{pagename}</span>
+          <span className="text-lg font-bold">{pagename}</span>
         </div>
 
         <div className="absolute right-4">
