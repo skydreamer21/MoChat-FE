@@ -8,6 +8,7 @@ interface HeadBarProps {
   center?: boolean;
   backbtn?: boolean;
   setbtn?: boolean;
+  isWhite?: boolean;
 }
 
 export default function HeadBar({
@@ -15,6 +16,7 @@ export default function HeadBar({
   center = false,
   backbtn = false,
   setbtn = false,
+  isWhite = true,
 }: HeadBarProps) {
   const navigate = useNavigate();
 
@@ -24,7 +26,9 @@ export default function HeadBar({
 
   return (
     <div>
-      <div className="bg-white relative flex items-center px-5 py-3">
+      <div
+        className={`${isWhite ? "bg-white" : "bg-background"} relative flex items-center px-5 py-3`}
+      >
         <div className="absolute left-4">
           {backbtn ? (
             <LeftArrow onClick={goBack} className="cursor-pointer" />
