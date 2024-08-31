@@ -46,3 +46,7 @@
     url("./assets/fonts/Pretendard-ExtraBold.woff") format("woff"),
     url("./assets/fonts/Pretendard-ExtraBold.woff2") format("woff2");
 }
+
+body {
+  @apply text-black-12 font-pre;
+}
