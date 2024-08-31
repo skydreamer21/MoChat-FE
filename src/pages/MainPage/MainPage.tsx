@@ -7,7 +7,7 @@ import TitleBar from "../../components/Bar/TitleBar";
 import PartyingFaceEmoji from "../../assets/emojis/partying-face.png";
 import TicketIcon from "../../assets/icons/ticket.svg?react";
 import PeopleIcon from "../../assets/icons/people.svg?react";
-import GroupItem from "../../components/Items/GroupItem";
+import GroupItem from "../../components/Item/GroupItem";
 
 const groups = [
   {
