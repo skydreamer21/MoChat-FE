@@ -6,13 +6,13 @@ interface ChatItemProps {
   isMine: boolean;
 }
 
-export default function ChatItem({
+const ChatItem = ({
   sender,
   profileSrc,
   message,
   timestamp,
   isMine,
-}: ChatItemProps) {
+}: ChatItemProps) => {
   return (
     <div className={`flex ${isMine ? "justify-end" : "justify-start"} mb-4`}>
       {!isMine && (
@@ -39,4 +39,6 @@ export default function ChatItem({
       </div>
     </div>
   );
-}
+};
+
+export default ChatItem;

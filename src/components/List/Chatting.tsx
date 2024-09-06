@@ -34,7 +34,7 @@ const messages = [
   // 더 많은 메시지
 ];
 
-export default function Chatting() {
+const Chatting = () => {
   return (
     <div className="p-4">
       {messages.map((msg, index) => (
@@ -49,4 +49,6 @@ export default function Chatting() {
       ))}
     </div>
   );
-}
+};
+
+export default Chatting;

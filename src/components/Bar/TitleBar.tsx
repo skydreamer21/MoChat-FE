@@ -3,7 +3,7 @@ interface TitleBarProps {
   isWhite?: boolean;
 }
 
-export default function TitleBar({ pagename, isWhite = true }: TitleBarProps) {
+const TitleBar = ({ pagename, isWhite = true }: TitleBarProps) => {
   return (
     <div>
       <div
@@ -15,4 +15,6 @@ export default function TitleBar({ pagename, isWhite = true }: TitleBarProps) {
       </div>
     </div>
   );
-}
+};
+
+export default TitleBar;

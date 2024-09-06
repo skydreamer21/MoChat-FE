@@ -11,12 +11,12 @@ interface GroupBarProps {
   isWhite?: boolean;
 }
 
-export default function GroupBar({
+const GroupBar = ({
   groupName,
   memberCount,
   profileSrc,
   isWhite = true,
-}: GroupBarProps) {
+}: GroupBarProps) => {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -59,4 +59,6 @@ export default function GroupBar({
       </div>
     </div>
   );
-}
+};
+
+export default GroupBar;

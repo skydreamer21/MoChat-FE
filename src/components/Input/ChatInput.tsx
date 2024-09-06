@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import PicIcon from "../../assets/icons/pic.svg?react";
 import SendIcon from "../../assets/icons/send.svg?react";
 
-export default function ChatInput() {
+const ChatInput = () => {
   const [inputValue, setInputValue] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -64,4 +64,6 @@ export default function ChatInput() {
       </button>
     </div>
   );
-}
+};
+
+export default ChatInput;
