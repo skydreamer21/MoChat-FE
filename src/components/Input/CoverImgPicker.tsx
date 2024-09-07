@@ -16,7 +16,7 @@ const CoverImgPicker = () => {
   };
 
   return (
-    <div className="flex flex-col px-12 py-5">
+    <div className="flex flex-col px-12">
       <label htmlFor="cover-img" className="cursor-pointer">
         <div className="relative aspect-square rounded-md border border-background shadow-lg shadow-background">
           {coverImg && (

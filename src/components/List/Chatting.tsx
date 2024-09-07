@@ -36,7 +36,7 @@ const messages = [
 
 const Chatting = () => {
   return (
-    <div className="p-4">
+    <div className="p-4 text-black-20">
       {messages.map((msg, index) => (
         <ChatItem
           key={index}

@@ -19,7 +19,9 @@ const GroupItem = ({ groupName, memberCnt, coverImg }: GroupItemProps) => {
         )}
       </div>
       <div className="flex flex-col pt-1">
-        <div className="text-sm font-semibold truncate">{groupName}</div>
+        <div className="text-sm text-black-20 font-semibold truncate">
+          {groupName}
+        </div>
         <div className="flex items-center gap-1 text-xs text-black-84">
           <Member />
           <span>{memberCnt}</span>
