@@ -4,6 +4,7 @@ import MainPage from "../pages/MainPage/MainPage";
 import MorePage from "../pages/MorePage/MorePage";
 import FallbackPage from "../pages/FallbackPage/FallbackPage";
 import GroupPage from "../pages/GroupPage/GroupPage";
+import NewGroupPage from "../pages/GroupPage/NewGroupPage";
 
 export default function Router() {
   return (
@@ -12,6 +13,7 @@ export default function Router() {
         <Route path="/" element={<MainPage />}></Route>
         <Route path="/more" element={<MorePage />}></Route>
         <Route path="/group" element={<GroupPage />}></Route>
+        <Route path="/group/post" element={<NewGroupPage />}></Route>
         <Route path="/*" element={<FallbackPage />}></Route>
       </Routes>
     </BrowserRouter>

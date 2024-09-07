@@ -12,7 +12,7 @@ const NavBar = () => {
           <HomeIcon className="w-8 h-8 mb-2" />
           <span className="text-xs text-black-84">홈</span>
         </Link>
-        <Link to="/create" className="flex flex-col items-center">
+        <Link to="/group/post" className="flex flex-col items-center">
           <AddBoxIcon className="w-8 h-8 mb-2" />
           <span className="text-xs text-black-84">만들기</span>
         </Link>
