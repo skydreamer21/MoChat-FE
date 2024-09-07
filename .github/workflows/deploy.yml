@@ -3,8 +3,9 @@ on:
     push:
         branches:
             - develop
-# env:
-#     DEV_BUCKET_KEY: build_fe_dev.zip
+            
+env:
+    DEV_BUCKET_KEY: build_fe_dev.zip
 
 jobs:
     build:
