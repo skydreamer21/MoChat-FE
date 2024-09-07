@@ -3,7 +3,7 @@ on:
     push:
         branches:
             - develop
-            
+
 env:
     DEV_BUCKET_KEY: build_fe_dev.zip
 
@@ -31,8 +31,8 @@ jobs:
 
             - name: zip create
             # 이후 appspec.yml cp 에 추가하기
+            # cp deploy.sh ./dist/ <-- 이것도 추가하기
               run: | 
-                cp deploy.sh ./dist/
                 zip -qq -r ./${{ env.DEV_BUCKET_KEY }} ./dist
               shell: bash
 
