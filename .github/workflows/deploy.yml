@@ -33,6 +33,7 @@ jobs:
             # 이후 appspec.yml cp 에 추가하기
             # cp deploy.sh ./dist/ <-- 이것도 추가하기
               run: | 
+                cp deploy.sh appspec.yml ./dist/
                 zip -qq -r ./${{ env.DEV_BUCKET_KEY }} ./dist
               shell: bash
 
