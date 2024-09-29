@@ -11,13 +11,13 @@ interface HeadBarProps {
   isWhite?: boolean;
 }
 
-export default function HeadBar({
+const HeadBar = ({
   pagename,
   center = false,
   backbtn = false,
   setbtn = false,
   isWhite = true,
-}: HeadBarProps) {
+}: HeadBarProps) => {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -45,4 +45,6 @@ export default function HeadBar({
       </div>
     </div>
   );
-}
+};
+
+export default HeadBar;
