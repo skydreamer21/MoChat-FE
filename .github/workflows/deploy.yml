@@ -1,0 +1,59 @@
+name: Deploy
+on:
+    push:
+        branches:
+            - develop
+
+env:
+    DEV_BUCKET_KEY: build_fe_dev.zip
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout source code
+              uses: actions/checkout@v4
+
+            - name: Check Node version
+              run: node -v
+
+            - name: Install Dependencies
+              run: npm install
+
+            # - name: Generate Environment Variables File for Production
+            #   env:
+            #     VITE_API_URL: ${{ secrets.VITE_API_URL }}
+            #   run: |
+            #     echo "VITE_API_URL=${VITE_API_URL}" >> .env
+
+            - name: Build
+              run: npm run build
+
+            - name: zip create
+            # 이후 appspec.yml cp 에 추가하기
+            # cp deploy.sh ./dist/ <-- 이것도 추가하기
+              run: | 
+                cp deploy.sh appspec.yml ./dist/
+                zip -qq -r ./${{ env.DEV_BUCKET_KEY }} ./dist
+              shell: bash
+
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: ${{ secrets.AWS_REGION }}
+
+            - name: Upload to S3
+              env:
+                  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+              run: |
+                  aws s3 cp --region ap-northeast-2 ./${{ env.DEV_BUCKET_KEY }} s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.DEV_BUCKET_KEY }}
+
+            - name: Deploy
+              run: aws deploy create-deployment
+                  --application-name Mochat
+                  --deployment-config-name CodeDeployDefault.AllAtOnce
+                  --deployment-group-name Mochat-Front-Deploy
+                  --s3-location bucket=${{ secrets.S3_BUCKET_NAME }},key=${{ env.DEV_BUCKET_KEY }},bundleType=zip

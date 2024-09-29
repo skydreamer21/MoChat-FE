@@ -1,0 +1,19 @@
+# s3 안의 빌드 파일 zip을 ec2에 배포한다.
+
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /mochat/fe
+    overwrite: yes
+permissions:
+  - object: /mochat/fe
+    owner: github-action
+    group: github-action
+    mode: 755
+hooks:
+  AfterInstall:
+    - location: deploy.sh
+      timeout: 60
+      runas: root

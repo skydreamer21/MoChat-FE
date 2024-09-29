@@ -1,6 +1,6 @@
 import GroupBanner from "../../components/Banner/GroupBanner";
 import GroupBar from "../../components/Bar/GroupBar";
-import NavBar from "../../components/Bar/NavBar";
+// import NavBar from "../../components/Bar/NavBar";
 import Chatting from "../../components/List/Chatting";
 
 import FlyingUfoEmoji from "../../assets/emojis/flying-ufo.png";

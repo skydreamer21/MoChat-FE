@@ -6,6 +6,7 @@ import FallbackPage from "../pages/FallbackPage/FallbackPage";
 import GroupPage from "../pages/GroupPage/GroupPage";
 import NewGroupPage from "../pages/GroupPage/NewGroupPage";
 import GroupSuccessPage from "../pages/GroupPage/GroupSuccessPage";
+import SamplePage from "../pages/SamplePage/SamplePage";
 
 export default function Router() {
   return (
@@ -16,6 +17,7 @@ export default function Router() {
         <Route path="/group" element={<GroupPage />}></Route>
         <Route path="/group/post" element={<NewGroupPage />}></Route>
         <Route path="/group/success" element={<GroupSuccessPage />}></Route>
+        <Route path="/sample" element={<SamplePage />}></Route>
         <Route path="/*" element={<FallbackPage />}></Route>
       </Routes>
     </BrowserRouter>
