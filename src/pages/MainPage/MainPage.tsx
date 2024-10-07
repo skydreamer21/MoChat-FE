@@ -3,11 +3,11 @@ import HeadBar from "../../components/Bar/HeadBar";
 import NavBar from "../../components/Bar/NavBar";
 import IconBtn from "../../components/Button/IconBtn";
 import TitleBar from "../../components/Bar/TitleBar";
+import GroupItem from "../../components/Item/GroupItem";
 
 import PartyingFaceEmoji from "../../assets/emojis/partying-face.png";
 import TicketIcon from "../../assets/icons/ticket.svg?react";
 import PeopleIcon from "../../assets/icons/people.svg?react";
-import GroupItem from "../../components/Item/GroupItem";
 
 const groups = [
   {
