@@ -8,6 +8,7 @@ import NewGroupPage from "../pages/GroupPage/NewGroupPage";
 import GroupSuccessPage from "../pages/GroupPage/GroupSuccessPage";
 import SamplePage from "../pages/SamplePage/SamplePage";
 import SubchatPage from "../pages/SubchatPage/SubchatPage";
+import NewSubchatPage from "../pages/SubchatPage/NewSubchatPage";
 
 export default function Router() {
   return (
@@ -19,6 +20,7 @@ export default function Router() {
         <Route path="/group/post" element={<NewGroupPage />}></Route>
         <Route path="/group/success" element={<GroupSuccessPage />}></Route>
         <Route path="/subchat" element={<SubchatPage />}></Route>
+        <Route path="/subchat/post" element={<NewSubchatPage />}></Route>
         <Route path="/sample" element={<SamplePage />}></Route>
         <Route path="/*" element={<FallbackPage />}></Route>
       </Routes>
