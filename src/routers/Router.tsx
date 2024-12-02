@@ -16,7 +16,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
         <Route path="/more" element={<MorePage />}></Route>
-        <Route path="/group" element={<GroupPage />}></Route>
+        <Route path="/group/:id" element={<GroupPage />}></Route>
         <Route path="/group/post" element={<NewGroupPage />}></Route>
         <Route path="/group/success" element={<GroupSuccessPage />}></Route>
         <Route path="/subchat" element={<SubchatPage />}></Route>

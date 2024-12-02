@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import HeadBar from "../../components/Bar/HeadBar";
 import Button from "../../components/Button/Button";
 import CoverImgPicker from "../../components/Input/CoverImgPicker";
 import TextField from "../../components/Input/TextField";
 
 export default function NewGroupPage() {
+  const navigate = useNavigate();
   const [groupName, setGroupName] = useState("");
   const isButtonDisabled = groupName.trim().length === 0;
 
   const handleNewGroup = () => {
     console.log("현재 입력된 그룹 이름:", groupName);
+    navigate("/group/success");
   };
 
   return (
