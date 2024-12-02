@@ -25,6 +25,9 @@ export default {
         sm: "4px",
         md: "8px",
       },
+      borderWidth: {
+        1.25: "1.25px",
+      },
       boxShadow: {
         nav: "12px 12px 12px 12px rgba(0, 0, 0, 0.04)",
       },

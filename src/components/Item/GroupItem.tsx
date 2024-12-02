@@ -4,11 +4,17 @@ interface GroupItemProps {
   groupName: string;
   memberCnt: string;
   coverImg?: string;
+  onClick?: () => void;
 }
 
-const GroupItem = ({ groupName, memberCnt, coverImg }: GroupItemProps) => {
+const GroupItem = ({
+  groupName,
+  memberCnt,
+  coverImg,
+  onClick,
+}: GroupItemProps) => {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1" onClick={onClick}>
       <div className="relative w-full aspect-square rounded-md border border-gray-light">
         {coverImg && (
           <img

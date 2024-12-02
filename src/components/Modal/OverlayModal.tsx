@@ -30,7 +30,7 @@ const OverlayModal = ({
 
       {/* Modal */}
       <div className="bg-[#ffffff] px-5 py-4 mx-6 space-y-4 rounded-lg shadow-lg z-0 w-full">
-        <div className="text-lg font-semibold">{title}</div>
+        <div className="text-center font-semibold">{title}</div>
 
         <div>{children}</div>
 

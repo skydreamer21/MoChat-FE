@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import HeadBar from "../../components/Bar/HeadBar";
 import Button from "../../components/Button/Button";
 import TextCopy from "../../components/Common/TextCopy";
@@ -13,8 +14,12 @@ const group = {
 };
 
 export default function GroupSuccessPage() {
+  const navigate = useNavigate();
+
   const handleGroupStart = () => {
     console.log("시작 버튼 클릭");
+    // navigate(`/group/${groupId}`);
+    navigate("/");
   };
 
   return (
